@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPN Сервис с Котами</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        
+    </style>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navigation1" data-bs-smooth-scroll="true">
     <!-- Панель навигации -->
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <nav id="navigation1" class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">VPN Сервис</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Переключить навигацию</button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#about" class="nav-link text-white-50">О VPN</a></li>
+                    <li class="nav-item"><a href="#about"  class="nav-link text-white-50">О VPN</a></li>
                     <li class="nav-item"><a href="#servers" class="nav-link text-white-50">Серверы</a></li>
-                    <li class="nav-item"><a href="#features" class="nav-link text-white">Особенности</a></li>
+                    <li class="nav-item"><a href="#features" class="nav-link text-white-50">Особенности</a></li>
                     <li class="nav-item"><a href="#vpn-speed" class="nav-link text-white-50">Шифрование</a></li>
                     <li class="nav-item"><a href="#user-reviews" class="nav-link text-white-50">Отзывы</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link text-white-50">Контакты</a></li>
@@ -26,88 +29,91 @@
             </div>
         </div>
     </nav>
-
     <!-- Главная секция -->
-    <header>
-        <div>
-            <h1>Самый продвинутый VPN. И многое другое.</h1>
-            <p>Обеспечьте свою конфиденциальность, защитите свои данные и безопасно подключайтесь к интернету откуда угодно.</p>
+    <header class="text-center bg-light">
+        <div class="py-3">
+            <h1 class="mt-5 fw-lighter">Самый продвинутый VPN. И многое другое.</h1>
+            <p class="fw-lighter">Обеспечьте свою конфиденциальность, защитите свои данные и безопасно подключайтесь к интернету откуда угодно.</p>
             <a href="#" class="btn btn-primary btn-lg">Начать</a>
         </div>
     </header>
 
     <!-- Секция с каруселью -->
-    <section id="features">
-        <div>
-            <h2>Почему выбирают наш VPN?</h2>
-            <div>
-                <div>
-                    <div>
-                        <img src="https://cdn2.thecatapi.com/images/3Pem6K30P.jpg" alt="Кот 1">
+    <section id="features" class="mt-5">
+        <div class="container">
+            <h2 class="text-center">Почему выбирают наш VPN?</h2>
+            <div id="carouselExampleIndicators" class="carousel slide py-3" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active card" style="height: 400px;">
+                        <img src="https://cdn2.thecatapi.com/images/3Pem6K30P.jpg" alt="Кот 1" class="card-img-top">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Защита конфиденциальности</h5>
+                            <p>Защитите ваше интернет-соединение с военным уровнем шифрования.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h5>Защита конфиденциальности</h5>
-                        <p>Защитите ваше интернет-соединение с военным уровнем шифрования.</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img src="https://cdn2.thecatapi.com/images/b9u.jpg" alt="Кот 2">
-                    </div>
-                    <div>
-                        <h5>Доступ из любой точки</h5>
-                        <p>Подключайтесь к любимым сайтам и приложениям безопасно из любого места.</p>
+                    <div class="carousel-item card" style="height: 400px;">
+                        <img src="https://cdn2.thecatapi.com/images/b9u.jpg" alt="Кот 2" class="card-img-top">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Доступ из любой точки</h5>
+                            <p>Подключайтесь к любимым сайтам и приложениям безопасно из любого места.</p>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
             </div>
-            <button type="button">Предыдущий</button>
-            <button type="button">Следующий</button>
         </div>
     </section>
 
     <!-- Секция с таблицей серверов VPN -->
-    <section id="servers">
-        <div>
-            <h2>Доступные VPN-серверы</h2>
-            <table>
-                <thead>
+    <section id="servers" class="bg-light mt-5 text-center">
+        <div class="container py-5">
+            <h2 class="text-center">Доступные VPN-серверы</h2>
+            <table class="table table-bordered">
+                <thead class="table-dark">
                     <tr>
-                        <th>Регион</th>
-                        <th>Доступные страны</th>
-                        <th>Нагрузка сервера</th>
-                        <th>Действие</th>
+                        <th class="align-middle">Регион</th>
+                        <th class="align-middle">Доступные страны</th>
+                        <th class="align-middle">Нагрузка сервера</th>
+                        <th class="align-middle">Действие</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Северная Америка</td>
-                        <td>США, Канада, Мексика</td>
-                        <td>
-                            <div>
-                                <div style="width: 30%;">30%</div>
+                        <td class="align-middle">Северная Америка</td>
+                        <td class="align-middle">США, Канада, Мексика</td>
+                        <td class="align-middle">
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 30%;">30%</div>
                             </div>
                         </td>
-                        <td><a href="#">Подключиться</a></td>
+                        <td class="align-middle"><a href="#" class="btn btn-outline-primary">Подключиться</a></td>
                     </tr>
                     <tr>
-                        <td>Европа</td>
-                        <td>Великобритания, Германия, Франция</td>
-                        <td>
-                            <div>
-                                <div style="width: 60%;">60%</div>
+                        <td class="align-middle">Европа</td>
+                        <td class="align-middle">Великобритания, Германия, Франция</td>
+                        <td class="align-middle">
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 60%;">60%</div>
                             </div>
                         </td>
-                        <td><a href="#">Подключиться</a></td>
+                        <td class="align-middle"><a href="#" class="btn btn-outline-primary">Подключиться</a></td>
                     </tr>
                     <tr>
-                        <td>Азия</td>
-                        <td>Япония, Южная Корея, Китай</td>
-                        <td>
-                            <div>
-                                <div style="width: 85%;">85%</div>
+                        <td class="align-middle">Азия</td>
+                        <td class="align-middle">Япония, Южная Корея, Китай</td>
+                        <td class="align-middle">
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" style="width: 85%;">85%</div>
                             </div>
                         </td>
-                        <td><a href="#">Подключиться</a></td>
+                        <td class="align-middle"><a href="#" class="btn btn-outline-primary">Подключиться</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -115,69 +121,75 @@
     </section>
 
     <!-- Секция настройки уровня шифрования -->
-    <section id="vpn-speed">
-        <div>
-            <h2>Настройка уровня шифрования VPN</h2>
-            <input type="range" min="128" max="256" step="32" id="vpnEncryptionSlider">
-            <p id="vpnEncryptionValue">Шифрование: 128-bit</p>
+    <section id="vpn-speed" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Настройка уровня шифрования VPN</h2>
+            <input type="range" min="128" max="256" step="32" id="vpnEncryptionSlider" class="form-range">
+            <p id="vpnEncryptionValue" class="text-center">Шифрование: 192-bit</p>
         </div>
     </section>
 
     <!-- Отзывы пользователей -->
-    <section id="user-reviews">
-        <div>
-            <h2>Отзывы пользователей</h2>
-            <div>
-                <div>
-                    <blockquote>
+    <section id="user-reviews" class="py-5 text-center">
+        <div class="container">
+            <h2 class="text-center">Отзывы пользователей</h2>
+            <div class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-item active">
+                    <blockquote class="blockquote">
                         <p>"Лучший VPN, который я использовал. Надежная защита и отличная скорость!"</p>
-                        <footer>Иван Иванов</footer>
+                        <footer class="blockquote-footer">Иван Иванов</footer>
                     </blockquote>
                 </div>
-                <div>
-                    <blockquote>
+                <div class="carousel-item">
+                    <blockquote class="blockquote">
                         <p>"Отличная служба поддержки, помогли быстро настроить VPN."</p>
-                        <footer>Мария Петрова</footer>
+                        <footer class="blockquote-footer">Мария Петрова</footer>
                     </blockquote>
                 </div>
-                <div>
-                    <blockquote>
+                <div class="carousel-item">
+                    <blockquote class="blockquote">
                         <p>"Я пользуюсь этим VPN каждый день и очень доволен."</p>
-                        <footer>Алексей Смирнов</footer>
+                        <footer class="blockquote-footer">Алексей Смирнов</footer>
                     </blockquote>
                 </div>
             </div>
-            <button type="button">Предыдущий</button>
-            <button type="button">Следующий</button>
         </div>
     </section>
 
-    <!-- Контакты -->
-    <section id="contact">
-        <div>
+    <section id="contact" class="py-5 mt-5">
+        <div class="container text-center">
             <h2>Контакты</h2>
             <p>Свяжитесь с нами для получения дополнительной информации или поддержки.</p>
-            <form>
-                <div>
-                    <input type="text" id="contactName" placeholder="Ваше имя" required>
-                    <label for="contactName">Имя</label>
+            <form class="needs-validation" novalidate>
+                <div class="form-floating">
+                    <input type="text" id="contactName" class="form-control" placeholder="Ваше имя" required>
+                    <label for="contactName" class="form-label">Имя</label>
+                    <div class="invalid-feedback">
+                        Пожалуйста, укажите имя.
+                    </div>
                 </div>
-                <div>
-                    <input type="email" id="contactEmail" placeholder="Ваш email" required>
-                    <label for="contactEmail">Email</label>
+                <div class="form-floating mt-3">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" required>
+                    <label for="contactEmail" class="form-label">Email</label>
+                    <div class="invalid-feedback">
+                        Пожалуйста, укажите email.
+                    </div>
                 </div>
-                <div>
-                    <textarea placeholder="Ваше сообщение" id="contactMessage" required></textarea>
-                    <label for="contactMessage">Сообщение</label>
+                <div class="form-floating mt-3">
+                    <textarea placeholder="Ваше сообщение" class="form-control" id="contactMessage" style="height: 80px" required></textarea>
+                    <label for="contactMessage" class="form-label">Сообщение</label>
+                    <div class="invalid-feedback">
+                        Сообщение не должно быть пустым.
+                    </div>
                 </div>
-                <button type="submit">Отправить</button>
+                <button type="submit" class="btn btn-primary align-middle mt-3">Отправить</button>
             </form>
         </div>
     </section>
 
-    <footer>
-        <div>
-            <p>© 2024 VPN Сервис</p>
+    <footer class="bg-dark py-3 text-center">
+        <div>   
+            <p class="text-white">© 2024 VPN Сервис</p>
         </div>
     </footer>
 
@@ -186,6 +198,23 @@
         document.getElementById('vpnEncryptionSlider').addEventListener('input', function () {
             document.getElementById('vpnEncryptionValue').innerText = 'Шифрование: ' + this.value + '-bit';
         });
+
+        (() => {
+                'use strict'
+
+                const forms = document.querySelectorAll('.needs-validation')
+
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+    })()
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
